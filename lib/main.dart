@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_music_app/config/provider_manager.dart';
@@ -10,6 +9,7 @@ import 'package:flutter_music_app/model/local_view_model.dart';
 import 'package:flutter_music_app/model/theme_model.dart';
 import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:flutter/material.dart';
 
 void main() async {
   Provider.debugCheckInvalidValueType = null;
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
                 GlobalWidgetsLocalizations.delegate
               ],
               supportedLocales: S.delegate.supportedLocales,
-              onGenerateRoute: Router.generateRoute,
+              onGenerateRoute: ModularRouter.generateRoute,
               initialRoute: RouteName.splash,
             ),
           );

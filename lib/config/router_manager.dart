@@ -12,7 +12,7 @@ class RouteName {
   static const String play = 'play';
 }
 
-class Router {
+class ModularRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RouteName.splash:
